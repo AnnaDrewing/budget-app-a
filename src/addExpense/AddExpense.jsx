@@ -199,9 +199,13 @@ export default function AddExpense({
         }}
       >
         <option value="Other">Other</option>
-        <option value="Food">Food</option>
-        <option value="Entertainment">Entertainment</option>
+        <option value="Groceries">Groceries</option>
         <option value="Rent">Rent</option>
+        <option value="Health">Health</option>
+        <option value="Sports">Sports</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Clothes&Shoes">Clothes&Shoes</option>
+        <option value="Holiday">Holiday</option>
       </select>
       <label
         htmlFor="label"
