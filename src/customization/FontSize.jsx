@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 
-export default function FontSize({ updateFontSize, userFontSize, userFont }) {
+export default function FontSize({ updateFontSize, userFontSize }) {
   // changing font size from string to int
   let defaultFont = 0;
   defaultFont = parseInt(userFontSize.substring(0, userFontSize.length - 2));
@@ -14,16 +14,6 @@ export default function FontSize({ updateFontSize, userFontSize, userFont }) {
     // font size as state in the app must be a string with 'px' at the end
     updateFontSize(newValue + "px");
   };
-  const marks = [
-    {
-      value: 10,
-      label: "10",
-    },
-    {
-      value: 20,
-      label: "20",
-    },
-  ];
 
   const theme = useTheme();
 
@@ -46,7 +36,7 @@ export default function FontSize({ updateFontSize, userFontSize, userFont }) {
         name="font-size"
         min="10"
         max="20"
-        step="1"
+        step="5"
         value={fontSize}
         onChange={handleChange}
         style={{
