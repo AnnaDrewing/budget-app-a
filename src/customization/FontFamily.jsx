@@ -47,10 +47,9 @@ export default function FontFamily({ updateFont, userFont }) {
           boxSizing: "content - box" /* Opera/IE 8+ */,
         }}
       >
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Times New Roman">Times New Roman</option>
+        <option value="Roboto, sans-serif">Sans-Serif</option>
+        <option value="Noto Serif, serif">Serif</option>
+        <option value="Ubuntu Mono, monospace">Monospace</option>
       </select>
     </>
   );
