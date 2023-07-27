@@ -3,19 +3,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
-import TextField from "@mui/material/TextField";
-import InputAdornment from "@mui/material/InputAdornment";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import dayjs from "dayjs";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import Alert from "@mui/material/Alert";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import "./AddExpense.css";
 import { useTheme } from "@mui/material/styles";
+import Tooltip from "@mui/material/Tooltip";
+import IconButton from "@mui/material/IconButton";
 
 export default function AddExpense({
   addExpense,
@@ -138,6 +133,17 @@ export default function AddExpense({
           fontFamily: userFont,
         }}
       >
+        <Tooltip title="You can change the currency displayed here by changing the settings in the main menu">
+          <IconButton>
+            <AiOutlineInfoCircle
+              style={{
+                color: theme.palette.primary.main,
+                width: "13px",
+                height: "13px",
+              }}
+            />
+          </IconButton>
+        </Tooltip>
         Price in: {userCurrency}
       </label>
       <input
