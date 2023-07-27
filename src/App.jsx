@@ -68,7 +68,7 @@ function App() {
             updateTheme={updateTheme}
             userTheme={userTheme}
           />
-          <BrowserRouter basename={"/budget-app/"}>
+          <BrowserRouter basename={"/budget-app-a/"}>
             <Routes>
               <Route
                 exact
